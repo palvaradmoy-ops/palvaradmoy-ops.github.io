@@ -72,8 +72,9 @@ html.cc,html.cc a,html.cc button{cursor:none;}
 .topbar{position:fixed;top:0;left:0;right:0;z-index:7000;background:rgba(44,12,22,0);backdrop-filter:blur(0);transition:background .4s,backdrop-filter .4s,border-color .4s;border-bottom:1px solid rgba(181,154,99,0);}
 .topbar.solid{background:rgba(44,12,22,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(181,154,99,.26);}
 .topbar .bar{display:flex;align-items:center;justify-content:space-between;height:68px;}
-.wordmark{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;color:var(--cream);letter-spacing:.4px;}
-.wordmark .sep{color:var(--gold-soft);margin:0 9px;font-weight:400;}
+.wordmark{display:inline-flex;align-items:center;font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;color:var(--cream);letter-spacing:.4px;}
+.wordmark .wm-seal{width:30px;height:30px;margin-right:11px;flex:none;}
+.wordmark .sep{color:var(--gold-soft);margin:0 10px;font-weight:400;}
 .wordmark .r{color:var(--gold-soft);font-style:italic;font-size:19px;}
 .bar-cta{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--gold-soft);text-decoration:none;border:1px solid rgba(181,154,99,.5);padding:11px 20px;transition:all .25s;}
 .bar-cta:hover{background:var(--gold);color:#fff;border-color:var(--gold);}
@@ -210,7 +211,10 @@ footer .copy{font-size:11px;letter-spacing:.08em;color:#82705c;}
   .about .inner{max-width:none;}
   .portrait{order:2;height:420px;min-height:0;padding:0 28px 40px;}
   .pframe{height:100%;}
-  .wordmark .sep,.wordmark .r{display:none;}
+  .wordmark{font-size:15px;}
+  .wordmark .r{font-size:14px;}
+  .wordmark .sep{margin:0 7px;}
+  .wordmark .wm-seal{width:24px;height:24px;margin-right:9px;}
   .creds .grid{grid-template-columns:1fr 1fr;}
   .cred{border-bottom:1px solid var(--line);}
   .cred:nth-child(2){border-right:none;}
@@ -221,6 +225,7 @@ footer .copy{font-size:11px;letter-spacing:.08em;color:#82705c;}
   .flagship{padding:56px 30px;}
   .steps{grid-template-columns:1fr;gap:42px;}
   .bar-cta{display:none;}
+  .fname{font-size:clamp(19px,5.4vw,25px);white-space:nowrap;}
 }
 </style>
 </head>
@@ -239,7 +244,7 @@ footer .copy{font-size:11px;letter-spacing:.08em;color:#82705c;}
 
 <header class="topbar" id="top">
   <div class="wrap bar">
-    <span class="wordmark">Pablo Alvarado<span class="sep">—</span><span class="r">Abogado y Notario</span></span>
+    <span class="wordmark"><svg class="wm-seal" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="none" stroke="#b59a63" stroke-width="2"/><circle cx="50" cy="50" r="38" fill="none" stroke="#b59a63" stroke-width="1"/><text x="50" y="64" text-anchor="middle" font-family="'Cormorant Garamond',Georgia,serif" font-size="40" font-weight="600" fill="#f4ede0" letter-spacing="1">AM</text></svg>Pablo Alvarado<span class="sep">|</span><span class="r">Abogado y Notario</span></span>
     <a class="bar-cta" href="https://calendly.com/palvaradmoy/diagnosticolegal" target="_blank" rel="noopener">Agendar una consulta</a>
   </div>
 </header>
